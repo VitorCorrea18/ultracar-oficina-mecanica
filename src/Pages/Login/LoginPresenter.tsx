@@ -1,5 +1,6 @@
 import { ILoginPresenterProps } from './interfaces';
 import { PrimaryButton } from '../../Components';
+import Logo from '../../Assets/Images/Logo.png';
 
 export default function LoginPresenter({
   handleLogin,
@@ -9,37 +10,43 @@ export default function LoginPresenter({
   setPassword,
 }: ILoginPresenterProps) {
   return (
-    <div className='login_page_container'>
-      <h1 className='login_page_title'>Login</h1>
-      <form className='login_page_form' onSubmit={(e) => e.preventDefault()}>
-        <div className='__form_label_container'>
-          <label className='__form_label'>
-            Email:
-            <input
-              className='input_control'
-              type='email'
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </label>
+    <main className='login-page-main'>
+      <section className='login-page-form-section-container'>
+        <div className='login-page-form-logo-container'>
+        <img src={Logo} alt="Logo" className='logo-image' />
         </div>
-        <div className='__form_label_container'>
-          <label className='__form_label'>
-            Password:
-            <input
-              className='input_control'
-              type='password'
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </label>
+        <div className='container mt-5'>
+          <h1 className='login-page-title'>Login</h1>
+          <form onSubmit={(e) => e.preventDefault()}>
+            <div className='form-group'>
+              <label>Email:</label>
+              <input
+                className='form-control input-control'
+                type='email'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className='form-group'>
+              <label>Password:</label>
+              <input
+                className='form-control input-control'
+                type='password'
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <div className='form-button-control'>
+              <PrimaryButton
+                type={'submit'}
+                text={'Login'}
+                onClick={handleLogin}
+                className='btn-lg login-form-btn'
+              />
+            </div>
+          </form>
         </div>
-        <PrimaryButton
-          type={'submit'}
-          text={'Login'}
-          onClick={handleLogin}
-        />
-      </form>
-    </div>
+      </section>
+    </main>
   );
 };
