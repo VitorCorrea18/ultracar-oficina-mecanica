@@ -4,9 +4,10 @@ export default function PrimaryButton({
   onClick,
   text,
   type,
+  className,
 }: IPrimaryButtonProps) {
   return (
-    <button type={type} className='primary_button' onClick={onClick}>
+    <button type={type} className={`btn btn-primary ${className}`} onClick={onClick}>
       {text}
     </button>
   );
