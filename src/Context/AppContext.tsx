@@ -6,9 +6,9 @@ import { getServicesByUserId } from '../Api';
 
 export const initialState: IState = {
   user: {
-    "id": 1,
-    "name": "John Doe",
-    "email": "john.doe@example.com"
+    id: 1,
+    name: "John Doe",
+    email: "john.doe@example.com"
   } as IUser,
   services: [],
   allCarBrands: []
