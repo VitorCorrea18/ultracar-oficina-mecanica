@@ -9,7 +9,10 @@ export default function DashBoardCardContainer({
   buttonTwoText,
   onButtonOneClick,
   onButtonTwoClick,
+  user
 }: IDashboardCardProps) {
+
+
   return (
     <DashboardCardPresenter
       title={title}
@@ -19,6 +22,7 @@ export default function DashBoardCardContainer({
       buttonTwoText={buttonTwoText}
       onButtonOneClick={onButtonOneClick}
       onButtonTwoClick={onButtonTwoClick}
+      user={user}
     />
   );
 }
