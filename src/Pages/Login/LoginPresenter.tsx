@@ -8,6 +8,7 @@ export default function LoginPresenter({
   setEmail,
   password,
   setPassword,
+  loginFailed
 }: ILoginPresenterProps) {
   return (
     <main className='login-page-main'>
@@ -35,12 +36,15 @@ export default function LoginPresenter({
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
+              {
+                loginFailed && <p className='login-failed-text'>Email ou senha incorretos</p>
+              }
             </div>
             <div className='form-button-control'>
               <PrimaryButton
                 type={'submit'}
                 text={'Login'}
-                onClick={handleLogin}
+                onClick={() => handleLogin(email,password)}
                 className='btn-lg login-form-btn'
               />
             </div>
