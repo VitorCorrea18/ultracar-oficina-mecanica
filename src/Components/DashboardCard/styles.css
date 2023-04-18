@@ -1,0 +1,25 @@
+.card-title {
+  font-size: 20px;
+}
+
+.card-icon {
+  padding: 5px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+}
+
+.card-description {
+  font-size: 16px;
+  color: #6e6e6e;
+  padding: 10px;
+}
+
+.card-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
