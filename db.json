@@ -27,6 +27,13 @@
       "email": "maria.silva@example.com",
       "phone": "(11) 2222-2222",
       "cpf": "12345678912"
+    },
+    {
+      "id": 3,
+      "name": "Carlos Andrada",
+      "email": "carlos.a@example.com",
+      "phone": "(11) 3333-3333",
+      "cpf": "98765432198"
     }
   ],
   "cars": [
@@ -116,6 +123,71 @@
       "status": "concluded",
       "technicianId": 1,
       "startDate": "2023-04-16T14:00:00.000Z",
+      "endDate": "2023-04-16T15:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "clientId": 3,
+      "carId": 3,
+      "detail": {
+        "description": "Troca de pastilhas de freio",
+        "price": 200.0
+      },
+      "parts": [
+        {
+          "name": "Pastilha de freio dianteira",
+          "quantity": 2,
+          "price": 50.0
+        },
+        {
+          "name": "Pastilha de freio traseira",
+          "quantity": 2,
+          "price": 50.0
+        }
+      ],
+      "status": "active",
+      "technicianId": 1,
+      "startDate": "2023-04-18T14:00:00.000Z",
+      "endDate": "2023-04-16T15:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "clientId": 1,
+      "carId": 1,
+      "detail": {
+        "description": "Troca de óleo do motor",
+        "price": 100.0
+      },
+      "parts": [
+        {
+          "name": "Óleo lubrificante",
+          "quantity": 5,
+          "price": 20.0
+        }
+      ],
+      "status": "active",
+      "technicianId": 1,
+      "startDate": "2023-04-18T10:00:00.000Z",
+      "endDate": "2023-04-16T15:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "clientId": 2,
+      "carId": 2,
+      "detail": {
+        "description": "Troca de filtro de ar-condicionado",
+        "price": 80.0
+      },
+      "parts": [
+        {
+          "name": "Filtro de ar-condicionado",
+          "quantity": 1,
+          "price": 80.0
+        }
+      ],
+      "status": "active",
+      "technicianId": 1,
+      "startDate": "2023-04-19T09:00:00.000Z",
       "endDate": "2023-04-16T15:00:00.000Z"
     }
   ]
